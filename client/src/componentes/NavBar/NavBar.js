@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './navbar.css'
 
-const imgName = require.context('./../../../public/assets/img', true, /\.png\.jpg\.ajpg$/);
 
 
 function NabVar(props) {
@@ -16,16 +15,10 @@ function NabVar(props) {
 
           <div className="links">
             <ul className="ul-link">
-              
-              <li className="li-link">
+
                 <Links to="/" valor="Home" />
-              </li>
-              <li className="li-link">
                 <Links to="/info" valor="Más Información" />
-              </li>
-              <li className="li-link">
                 <Links to="/ayudanos" valor="Ayúdanos" />
-              </li>
 
             </ul>
           </div>
@@ -45,8 +38,9 @@ function Links(props) {
   return (
     <>
 
-      <Link className="link" to={props.to} >{props.valor}</Link>
-
+    <li className="li-link">
+      <NavLink className="link" to={props.to} >{props.valor}</NavLink>
+    </li>
     </>
   );
 
