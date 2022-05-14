@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import './index.css'
+
 import ConexionSubirDatos from './conexion(no tocar)';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 
@@ -10,6 +11,8 @@ import NavBar from './/componentes/NavBar/NavBar';
 import Home from './paginas/1home/home'
 import Info from './paginas/2info/info'
 import Ayuda from './paginas/3ayuda/ayuda'
+
+const imgName = require.context('./../public/assets/img',true,/\.png\.jpg\.ajpg$/)
 
 
 
