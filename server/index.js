@@ -16,7 +16,7 @@ const db = mysql.createConnection({
     database: 'prueba',
 })
 
-app.post('/insert',(req, res) => {
+app.post('/set',(req, res) => {
 
     const usu = req.body.usu
     const contra = req.body.contra
@@ -31,6 +31,24 @@ app.post('/insert',(req, res) => {
         }
     })
 })
+
+
+app.post('/get',(req, res) => {
+
+    const usu = req.body.usu
+    const contra = req.body.contra
+    console.log(usu+" ------ "+contra+" ------")
+
+    db.query("SELECT * FROM usuarios", (err, result)=>{
+        if(err){
+            console.log(err);
+            console.log("no jalo");
+        }else{
+            res.send(result);
+        }
+    })
+})
+
 
 app.listen(3001, ()=>{
     console.log('servidor En linea');

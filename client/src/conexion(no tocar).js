@@ -6,13 +6,34 @@ function ConexionSubirDatos() {
 
   const [usu, setusu] = useState("");
   const [contra, setcontra] = useState("");
+  const [p, setP] = useState("hola");
 
+  const [datosServidor, setDatosServidor] = useState([]);
+
+  const getDatos = ()=>{
+
+    Axios.post('http://localhost:3001/get',{
+      usu:usu,
+      contra:contra
+    }).then((response) => {
+      setDatosServidor(response.data)
+
+      console.log(datosServidor)
+
+    })
+
+  }
 
   const a = () =>{
-  Axios.post('http://localhost:3001/insert',{
+  Axios.post('http://localhost:3001/set',{
     usu:usu,
     contra:contra
-  }).then(() => {
+
+  }).then((response) => {
+    setDatosServidor(response.data)
+
+    console.log(datosServidor)
+
     console.log("exitoso")
   })
 
@@ -28,6 +49,8 @@ function ConexionSubirDatos() {
         setcontra(e.target.value);
       }}/>
       <button onClick = {a}> enviar</button>
+
+      <button onClick = {getDatos}> obtener</button>
 
 
     </div>
