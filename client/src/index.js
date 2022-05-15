@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css'
 
 import ConexionSubirDatos from './conexion(no tocar)';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 
 
 import NavBar from './componentes/NavBar/NavBar';
@@ -19,7 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-  < BrowserRouter>
+  <BrowserRouter>
       <NavBar></NavBar>
 
       <Routes>

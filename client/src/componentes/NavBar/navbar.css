@@ -134,7 +134,10 @@
 .li-link:hover::before{
 
 
-  animation: menu 2s infinite alternate ease;
+  animation: menu 2s alternate ease;
+  right: 0%;
+
+
 }
 
 

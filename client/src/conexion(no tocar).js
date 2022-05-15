@@ -1,4 +1,4 @@
-import React, { useState, onChange } from 'react';
+import React, { useState } from 'react';
 
 import Axios from 'axios'
 
@@ -6,7 +6,6 @@ function ConexionSubirDatos() {
 
   const [usu, setusu] = useState("");
   const [contra, setcontra] = useState("");
-  const [p, setP] = useState("hola");
 
   const [datosServidor, setDatosServidor] = useState([]);
 

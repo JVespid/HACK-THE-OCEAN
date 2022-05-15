@@ -9,47 +9,96 @@ app.use(cors());
 app.use(express.json());
 
 
+
+
 const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: '',
-    database: 'prueba',
+    database: 'hackoesan',
 })
 
-app.post('/set',(req, res) => {
 
-    const usu = req.body.usu
-    const contra = req.body.contra
+app.post('/setDatosUsuario',(req, res) => {
 
-    db.query("INSERT INTO usuarios (usuario, contra) VALUES (?,?)",
-    [usu, contra], (err, result)=>{
+    const nombre = req.body.nombre
+    const edad = req.body.edad
+    const correo = req.body.correo
+
+    db.query("INSERT INTO datoscandidatos (Nombre, Edad, Correo) VALUES (?,?,?)",
+    [nombre, edad, correo], (err, result)=>{
         if(err){
             console.log(err);
             console.log("no jalo");
         }else{
-            res.send("datos ingresados con exito");
+            res.send("datos ingresados con éxito");
         }
     })
 })
 
 
-app.post('/get',(req, res) => {
+// insercion de los datos para 
+app.post('/setDatosPago',(req, res) => {
 
-    const usu = req.body.usu
-    const contra = req.body.contra
-    console.log(usu+" ------ "+contra+" ------")
+    const nombre = req.body.nombre
+    const nombreDonador = req.body.nombreDonador
+    const NumeroTarjeta = req.body.NumeroTarjeta
+    const fecha = req.body.fecha
+    const CVV = req.body.CVV
+    const pago = req.body.pago
+    const msg = req.body.msg
 
-    db.query("SELECT * FROM usuarios", (err, result)=>{
+
+    db.query("INSERT INTO datospago (Nombre, NombreDonador, Pago, MSG) VALUES (?, ?, ?, ?)",
+    [nombre, nombreDonador, pago, msg], (err, result)=>{
+        if(err){
+            console.log(err);
+            console.log("no jalo");
+        }else{
+            res.send("datos ingresados con éxito");
+        }
+    })
+    
+
+})
+
+
+
+
+app.post('/getIDonaciones',(req, res) => {
+    db.query("SELECT MAX(id) AS id FROM datosPago", (err, result)=>{
         if(err){
             console.log(err);
             console.log("no jalo");
         }else{
             res.send(result);
         }
-    })
-})
+    });
+});
 
 
-app.listen(3001, ()=>{
+
+app.post('/getDonaciones',(req, res) => {
+    let envio = req.body.envio
+    console.log(envio)
+
+    let limite = envio - 20;
+    limite++;
+    envio++;
+
+    db.query(`SELECT * FROM datospago WHERE id<${envio} AND id>${limite}`, (err, result)=>{
+        if(err){
+            console.log(err);
+            console.log("no jalo");
+        }else{
+            res.send(result);
+        }
+    });
+});
+
+
+
+
+app.listen(process.env.PORT || 3001, ()=>{
     console.log('servidor En linea');
-})
+}) 
