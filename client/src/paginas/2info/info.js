@@ -49,16 +49,32 @@ function Cuerpo(props) {
   return (
     <>
 
-      <div className="cuerpo">
+      <div className="info-cuerpo-top">
+        <CuerpoTop />
+      </div>
+      <hr></hr>
+      <div className="info-cuerpo-bottom">
+        <CuerpoBottom />
+      </div>
 
-        
-        <div className="info-cuerpo-text-top">
+    </>
+  );
+}
 
-          <div className="info-cuerpo-titulo">
-            <h2>El problema</h2>
-          </div>
+function CuerpoTop(props) {
 
-          <div className="info-cuerpo-text1">
+  return (
+
+    <>
+
+      <div className="info-cuerpo-text-top">
+
+        <div className="info-cuerpo-titulo">
+          <h2>El problema:</h2>
+        </div>
+
+        <div className="info-cuerpo-text">
+          <div className="info-cuerpo-p">
             <p>Hoy en día muchos de los productos que son
               consumidos generan contaminación directa por
               su producción o bien indirecta, por su degradación
@@ -68,24 +84,70 @@ function Cuerpo(props) {
               nuestra comida, nuestra ropa, los cosméticos
               y nuestros mares</p>
           </div>
+          <div className="info-cuerpo-img">
+            <img src={imgName('./pato.webp')} alt="Un pato cuak (¯\(*u*)\_)" />
+          </div>
+        </div>
 
-          <div className="info-cuerpo-text2">
+    
+        <div className="info-cuerpo-text">
+          <div className="info-cuerpo-p">
             <p>Convivimos a diario con la contaminación atmosférica,
               debido al trafico y a las emisiones de las industrias. la
               contaminación del aire es responsable de un elevado
               numero de muertes prematuras y enfermedades
               respiratorias en nuestras ciudades</p>
           </div>
-
-        </div>
-        <div className="info-cuerpo-img-top">
-
+          <div className="info-cuerpo-img">
+            <img src={imgName('./botellas.jpg')} alt="imagen que representa la contaminación mostrando una parte de una playa llena de botellas de plástico, suceso impactante que realmente esta pasando en esta sociedad " />
+          </div>
         </div>
 
       </div>
 
     </>
-  );
+
+
+
+  )
+
+}
+
+function CuerpoBottom(props) {
+  return (
+    <>
+      <div className="info-Cuerpo-bottom-texts">
+
+        <div className="info-cuerpo-titulo">
+          <h2> La solución: </h2>
+        </div>
+        <div className="info-Cuerpo-bottom-p">
+          <p>La contaminación de nuestros mares puede combatirse de
+            forma efectiva mejorando los modelos de movilidad
+            en nuestras ciudades, para hacerlas mas sanas y
+            sostenibles, generando menos CO2</p>
+        </div>
+        <div className="info-Cuerpo-bottom-p">
+          <p>La reducción en el consumo y producción de plasticos
+            de un solo uso es prioritario y urgente, estando al
+            tanto de como se gestionan los residuos por parte de
+            las empresas, para que no lo hagan en los mares</p>
+        </div>
+        <div className="info-Cuerpo-bottom-p">
+          <p>Es necesario apoyar a las cambañas de limpieza de las
+            playas, para que estas no esten llenas de basura y
+            termine matando mas fauna.</p>
+        </div>
+
+      </div>
+      <div className="info-cuerpo-img-bottom">
+        <img src={imgName('./malteada.jpg')} alt="imagen que representa la contaminación mostrando una parte de una playa llena de botellas de plástico, suceso impactante que realmente esta pasando en esta sociedad " />
+      </div>
+
+    </>
+
+
+  )
 }
 
 

@@ -4,6 +4,9 @@ import './ayuda.css'
 
 import PiePagina from './../../piepagina/PiePagina';
 
+
+const imgName = require.context('./../../assets/img/ayuda', true)
+
 export default function Ayuda(props) {
 
   const host = 'http://localhost:3000/';
@@ -13,6 +16,19 @@ export default function Ayuda(props) {
 
 
       <div className="relative">
+        <Encabezado />
+      </div>
+
+
+
+      <div className="relative">
+
+        <div className="ayuda-titulo">
+          <h2>Ellos son los últimos que han ayudado a planeta <br />
+            ¡Gracias a ellos podremos hacer un cambio!</h2>
+
+        </div>
+
         <TablaDonaciones host={host} />
       </div>
 
@@ -34,10 +50,31 @@ export default function Ayuda(props) {
       </div>
 
 
-
     </>
   );
 }
+
+
+
+function Encabezado(props) {
+
+  return (
+
+    <div className="encabezado">
+
+      <div className="encabezado-titulo">
+        <h2> ¿Puedes hacer un cambio?  </h2>
+      </div>
+      <div className="encabezado-img">
+        <img src={imgName(`./encabezado.jpg`)} alt="imagen del encabezado" />
+      </div>
+
+    </div>
+
+  );
+
+}
+
 
 
 
@@ -80,30 +117,49 @@ function TablaDonaciones(props) {
 
   return (
     <>
+
       <div className="contenedor-ultimasDonaciones">
+
 
         <div className="contenedor-datos">
 
-          <div className="datos-titulo">
-            <h2>Gracias por sus donaciones</h2>
-          </div>
+          <div className="content-Datos">
 
-          <div className="">
+            <div className="datos id">
+
+              <ul className="ul-datos ud">
+                <li className="li-datos ld"><p className="p-datos">Nombre del donador</p></li>
+                <li className="li-datos ld"><p className="p-datos">Donación echa</p></li>
+                <li className="li-datos ld"><p className="p-datos">Mensaje del Donador</p></li>
+              </ul>
+
+            </div>
 
             {datos.map((val, key) => {
-              return <div className="datos">
-                <ul className="ul-datos">
-                  <li className="li-datos"><p className="p-datos">Nombre del donador</p> {val.NombreDonador}</li>
-                  <li className="li-datos"><p className="p-datos">Donación echa</p> {val.Pago}</li>
-                  <li className="li-datos"><p className="p-datos"></p> {val.MSG}</li>
-                </ul>
+              return (
 
-              </div>
+                <div className="datos">
+
+                  <ul className="ul-datos">
+                    <li className="li-datos"><p className="p-datos">{val.NombreDonador}</p> </li>
+                    <li className="li-datos"><p className="p-datos">{val.Pago}</p></li>
+                    <li className="li-datos"><p className="p-datos">{val.MSG}</p></li>
+                  </ul>
+
+                </div>
+
+              )
             })}
 
           </div>
-          <button onClick={iterador}>Actualizar</button>
+
+          <div className="btn-actualizar">
+            <button onClick={iterador}>Actualizar</button>
+          </div>
+
         </div>
+
+
       </div>
     </>
 
@@ -136,31 +192,34 @@ function DatosUsuario(props) {
   return (
     <>
       <div className="contenedor-DatosUsuario">
+        <div className="ayuda-titulo-cuerpo">
+          <h2> Ingresa tus datos para participar en futuras jornadas de limpieza </h2>
+        </div>
 
-        <div className="preguntas">
+        <div className="p-preguntas">
 
           <div className="preguntas">
-            <label htmlFor="nombre">Ingresa tu nombre</label>
-            <input type="text" id="nombre" placeholder="Nombre completo:" onChange={(e) => {
+            <div><label htmlFor="nombre">Ingresa tu nombre</label></div>
+            <div><input type="text" id="nombre" placeholder="Nombre completo:" onChange={(e) => {
               setNombre(e.target.value)
-            }} />
+            }} /></div>
           </div>
 
           <div className="preguntas">
-            <label htmlFor="edad">Ingresa tu edad</label>
-            <input type="number" id="edad" placeholder="18:" onChange={(e) => {
+            <div><label htmlFor="edad">Ingresa tu edad</label></div>
+            <div><input type="number" id="edad" placeholder="18:" onChange={(e) => {
               setEdad(e.target.value)
-            }} />
+            }} /></div>
           </div>
 
           <div className="preguntas">
-            <label htmlFor="corre">Ingresa tu Correo Electrónico</label>
-            <input type="mail" id="corre" placeholder="ejemplo@corporacion.com" onChange={(e) => {
+            <div><label htmlFor="corre">Ingresa tu Correo Electrónico</label></div>
+            <div><input type="mail" id="corre" placeholder="ejemplo@corporacion.com" onChange={(e) => {
               setCorreo(e.target.value)
-            }} />
+            }} /></div>
           </div>
+          <div className="btnFrom"><button onClick={setDatos}> Enviar mis Datos Para Ayudar </button></div>
 
-          <button onClick={setDatos}> Enviar mis Datos Para Ayudar </button>
 
 
         </div>
@@ -203,58 +262,66 @@ function DatosTarjetas(props) {
     <>
 
 
-      <div className="contenedor-DatasTarjeta">
-
-        <div className="preguntas">
-          <label htmlFor="nameTitular">Ingresa el nombre del titular</label>
-          <input type="text" id="nameTitular" placeholder="Nombre:" onChange={(e) => {
-            setNombre(e.target.value)
-          }} />
+      <div className="contenedor-DatosTarjeta">
+        <div className="ayuda-titulo-cuerpo">
+          <h2> ¿¿Quieres salvar el planeta ahora??, también puedes donar: </h2>
         </div>
 
-        <div className="preguntas">
-          <label htmlFor="numeroTar">Ingresa los 16 dígitos de la tarjeta</label>
-          <input type="number" id="numeroTar" placeholder="123456789012345" onChange={(e) => {
-            setNumeroTarjeta(e.target.value)
-          }} />
-        </div>
 
-        <div className="preguntas">
-          <label htmlFor="fecha">ingresa la fecha de vencimiento</label>
-          <input type="month" id="fecha" placeholder="05 de 2026" onChange={(e) => {
-            setFecha(e.target.value)
-          }} />
-        </div>
+        <div className="p-preguntas">
 
-        <div className="preguntas">
-          <label htmlFor="CVV">Ingresa el código CVV</label>
-          <input type="password" id="CVV" placeholder="123" onChange={(e) => {
-            setCVV(e.target.value)
-          }} />
-        </div>
+          <div className="preguntas">
+            <div><label htmlFor="nameTitular">Ingresa el nombre del titular</label></div>
+            <div><input type="text" id="nameTitular" placeholder="Nombre:" onChange={(e) => {
+              setNombre(e.target.value)
+            }} /></div>
+          </div>
 
-        <div className="preguntas">
-          <label htmlFor="nameDonador">Ingresa el nombre de quien hace el donativo</label>
-          <input type="text" id="nameDonador" placeholder="Nombre:" onChange={(e) => {
-            setNombreDonador(e.target.value)
-          }} />
-        </div>
+          <div className="preguntas">
+            <div><label htmlFor="numeroTar">Ingresa los 16 dígitos de la tarjeta</label></div>
+            <div><input type="number" id="numeroTar" placeholder="123456789012345" onChange={(e) => {
+              setNumeroTarjeta(e.target.value)
+            }} /></div>
+          </div>
 
-        <div className="preguntas pago">
-          <label htmlFor="pago">Ingresa La cantidad con la que nos quieres ayudar (en MXN)</label>
-          <input type="number" id="pago" placeholder="100" onChange={(e) => {
-            setPago(e.target.value)
-          }} />
-        </div>
+          <div className="preguntas">
+            <div><label htmlFor="fecha">ingresa la fecha de vencimiento</label></div>
+            <div><input type="month" id="fecha" placeholder="05 de 2026" onChange={(e) => {
+              setFecha(e.target.value)
+            }} /></div>
+          </div>
 
-        <div className="preguntas pago">
-          <label htmlFor="msg">Ingresa un mensaje, este aparecerá el la tabla de posiciones </label>
-          <input type="text" id="msg" placeholder="max 100 caracteres" onChange={(e) => {
-            setMsg(e.target.value)
-          }} />
-        </div>
+          <div className="preguntas">
+            <div><label htmlFor="CVV">Ingresa el código CVV</label></div>
+            <div><input type="password" id="CVV" placeholder="123" onChange={(e) => {
+              setCVV(e.target.value)
+            }} /></div>
+          </div>
 
-        <button onClick={setDonacion}> Enviar mi contribución </button>
+          <div className="preguntas">
+            <div><label htmlFor="nameDonador">Ingresa el nombre de quien hace el donativo</label></div>
+            <div><input type="text" id="nameDonador" placeholder="Nombre:" onChange={(e) => {
+              setNombreDonador(e.target.value)
+            }} /></div>
+          </div>
+
+          <div className="preguntas pago">
+            <div><label htmlFor="pago">Ingresa La cantidad con la que nos quieres ayudar (en MXN)</label></div>
+            <div><input type="number" id="pago" placeholder="100" onChange={(e) => {
+              setPago(e.target.value)
+            }} /></div>
+          </div>
+
+          <div className="preguntas pago">
+            <div><label htmlFor="msg">Ingresa un mensaje, este aparecerá el la tabla de posiciones </label></div>
+            <div><input type="text" id="msg" placeholder="max 100 caracteres" onChange={(e) => {
+              setMsg(e.target.value)
+            }} /></div>
+          </div>
+          <div className="btnFrom"> <button onClick={setDonacion}> Enviar mi contribución </button> </div>
+
+
+        </div>
       </div>
     </>
   );

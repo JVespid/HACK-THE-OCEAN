@@ -1,15 +1,20 @@
 const express = require('express');
 const app = express();
 
-const path = require('path');
 
 const mysql = require('mysql');
 const cors = require('cors');
 
 
+const path = require('path');
+
+
 
 app.use(cors());
 app.use(express.json());
+
+
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', function(req, res) {
@@ -69,8 +74,6 @@ app.post('/setDatosPago',(req, res) => {
     
 
 })
-
-
 
 
 app.post('/getIDonaciones',(req, res) => {

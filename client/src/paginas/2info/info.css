@@ -28,3 +28,177 @@
 
   color: var(--blanco);
 }
+
+.info-cuerpo-top,
+.info-cuerpo-bottom{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.info-cuerpo-text-top{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.info-cuerpo-titulo{
+  
+  position: relative;
+
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 0 auto;
+
+  width: 100%;
+
+  font-size: 30PX;
+
+  font-weight: bold;
+  color: var(--morado);
+}
+
+.info-cuerpo-text{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  overflow: hidden;
+  margin: 50px 50px;
+
+}
+
+.info-cuerpo-p,
+.info-Cuerpo-bottom-p{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: auto;
+
+  border-right: 3px solid var(--rosa);
+  border-bottom: 3px solid var(--rosa);
+  box-shadow: 9px 9px 35px -8px rgba(0, 0, 0, 0.62);
+
+}
+
+.info-cuerpo-p p,
+.info-Cuerpo-bottom-p{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width:80%;
+  text-align: justify;
+  margin: auto;
+
+  padding: 20px;
+
+  font-size: 25px;
+
+}
+
+
+.info-cuerpo-img{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 30%;
+  min-width: 360px;
+  height: 80%;
+  margin: 50px auto;
+
+
+  border-right: 1px solid var(--morado);
+  box-shadow: 9px 9px 35px -8px rgba(0, 0, 0, 0.62);
+
+}
+
+.info-cuerpo-img img{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 360px;
+  margin: auto;
+
+}
+
+
+
+.info-Cuerpo-bottom-texts{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  overflow: hidden;
+
+}
+
+
+.info-Cuerpo-bottom-p{
+  margin: 50px auto;
+}
+
+
+.info-cuerpo-img-bottom{
+  
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 40%;
+  min-width: 360px;
+  height: 80%;
+  margin: 50px auto;
+  
+}
+
+
+.info-cuerpo-img-bottom img{
+  
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 360px;
+  margin: auto;
+  
+}
+
+
+
