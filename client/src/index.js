@@ -6,7 +6,7 @@ import ConexionSubirDatos from './conexion(no tocar)';
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 
 
-import NavBar from './componentes/NavBar/NavBar';
+import NavBar from './NavBar/NavBar';
 
 import Home from './paginas/1home/home'
 import Info from './paginas/2info/info'

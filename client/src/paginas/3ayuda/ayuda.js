@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Axios from 'axios'
 
+var iterador = 0;
 
 export default function Ayuda(props) {
+  
+  iterador = 0;
 
-  let i =0;
 
   const host = 'http://localhost:3001/';
 
@@ -16,7 +18,7 @@ export default function Ayuda(props) {
 
 
         <div className="contenedor-ultimasDonaciones">
-          <TablaDonaciones host={host} i={i} />
+          <TablaDonaciones host={host} />
 
         </div>
 
@@ -52,6 +54,7 @@ export default function Ayuda(props) {
 function TablaDonaciones(props) {
 
   const [datos, setDatos] = useState([])
+  const [i,setI] = useState(0)
 
 
   const ObtencionLista = () => {
@@ -62,19 +65,20 @@ function TablaDonaciones(props) {
         envio:response.data[0].id
 
       }).then(response => {
-        setDatos(response.data)
+        if (i === 0) {
+          setDatos(response.data)
+          setI(1)
+        }
       })
 
     })
   }
 
-  const iniciarTabla = (i)=>{
-    if(i===0){
-      ObtencionLista();
-      i++;
-    }
+  const iterador = ()=>{
+    setI(0);
   }
-  iniciarTabla(props.i);
+
+      ObtencionLista();
 
 
   return (
@@ -100,7 +104,7 @@ function TablaDonaciones(props) {
           })}
 
         </div>
-        <button onClick={ObtencionLista}>Actualizar</button>
+        <button onClick={iterador}>Actualizar</button>
       </div>
 
     </>
