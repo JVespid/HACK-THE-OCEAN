@@ -20,7 +20,8 @@
   flex-direction: column;
 
   width: 100%;
-  height: 100%;
+
+  overflow: hidden;
 }
 
 .encabezado-titulo {
@@ -48,13 +49,13 @@
 
 .encabezado-img {
   display: flex;
-  flex-wrap: wrap;
-
-  width: 100%;
+  height: 700px;
+  overflow: hidden;
 }
 
 .encabezado-img img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   -webkit-filter: brightness(50%);
   filter: brightness(50%);

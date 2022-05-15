@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.26865207.css",
+    "main.js": "/static/js/main.30e6a62e.js",
+    "static/media/cuerpo.png": "/static/media/cuerpo.a532f17a818219f3f6ae.png",
+    "static/media/encavezado.png": "/static/media/encavezado.3310db1aa23ebbc8f94f.png",
+    "static/media/encabezado.webp": "/static/media/encabezado.884b7913a47a04ad3aea.webp",
+    "static/media/botellas.jpg": "/static/media/botellas.486cf52ecf683a0152cc.jpg",
+    "static/media/malteada.jpg": "/static/media/malteada.66482c5872808f169215.jpg",
+    "static/media/pato.webp": "/static/media/pato.5793f1a946b34e767b93.webp",
+    "index.html": "/index.html",
+    "main.26865207.css.map": "/static/css/main.26865207.css.map",
+    "main.30e6a62e.js.map": "/static/js/main.30e6a62e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26865207.css",
+    "static/js/main.30e6a62e.js"
+  ]
+}

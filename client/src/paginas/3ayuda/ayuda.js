@@ -6,7 +6,7 @@ import PiePagina from './../../piepagina/PiePagina';
 
 export default function Ayuda(props) {
 
-  const host = 'http://localhost:3001/';
+  const host = 'http://localhost:3000/';
 
   return (
     <>

@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+
+const path = require('path');
+
 const mysql = require('mysql');
 const cors = require('cors');
 
@@ -7,6 +10,11 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 
 
@@ -15,7 +23,7 @@ const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: '',
-    database: 'hackoesan',
+    database: 'hackosean',
 })
 
 
@@ -99,6 +107,6 @@ app.post('/getDonaciones',(req, res) => {
 
 
 
-app.listen(process.env.PORT || 3001, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log('servidor En linea');
 }) 
