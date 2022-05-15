@@ -1,7 +1,10 @@
 import React from 'react';
 import './home.css'
 
+import PiePagina from './../../piepagina/PiePagina';
+
 const imgName = require.context('./../../assets/img/home', true)
+
 
 
 function Home(props) {
@@ -14,9 +17,9 @@ function Home(props) {
       <div className="relative">
         <Cuerpo />
       </div>
-      {/*  <div className="relative">
-      <PiePagina />
-      </div> */}
+      <div className="relative">
+        <PiePagina />
+      </div>
 
     </>
   );
@@ -124,19 +127,23 @@ function CuerpoButton(props) {
       <div className="CuerpoButton-p">
         <p>La contaminación de los mares y océanos es un problema grave que afecta <br />
           directamente a la vida silvestre de los hábitats oceánicos e, indirectamente, a la salud <br />
-          humana. Los derrames de petróleo, residuos tóxicos, el vertido ilegal y la acumulación de <br /> 
+          humana. Los derrames de petróleo, residuos tóxicos, el vertido ilegal y la acumulación de <br />
           plásticos son sólo algunas de las muchas fuentes de contaminación.</p>
       </div>
 
-      <div className="CuerpoButton-img">
-        <img src={imgName(`./cuerpo.png`)} alt="imagen de estadística" />
+      <div className="CuerpoButton-Cimg">
+
+        <div className="CuerpoButton-img">
+          <img src={imgName(`./cuerpo.png`)} alt="imagen de estadística" />
+        </div>
+
       </div>
 
       <div className="CuerpoButton-referencia">
-        <p> Densidad de los plásticos a nivel mundial para cada una de las cuatro clases de <br/>
-        tamaño (de 0,33 a 1,00 mm, de 1,01 a 4,75 mm, de 4,76 a 200 mm, y &gt;200 mm). <br /><br />
+        <p> Densidad de los plásticos a nivel mundial para cada una de las cuatro clases de <br />
+          tamaño (de 0,33 a 1,00 mm, de 1,01 a 4,75 mm, de 4,76 a 200 mm, y &gt;200 mm). <br /><br />
 
-        Fuente: Plastic Pollution in the World's Oceans</p>
+          Fuente: Plastic Pollution in the World's Oceans</p>
       </div>
 
     </>

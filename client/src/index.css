@@ -1,5 +1,6 @@
 :root{
     --azul: rgba(60, 173, 191, 1);
+    --azul-o: rgba(60, 173, 191, 0.5);
     --blanco: rgba(214, 219, 231, 1);
     --negro: rgba(0, 0, 0, 1);
     --rosa: rgba(245, 100, 169, 1);
@@ -23,6 +24,8 @@ body{
 
     margin: 0;
     padding: 0;
+
+    background-color: var(--blanco);
 
 }
 
