@@ -39,7 +39,9 @@
   border-right: 5px solid var(--morado);
 
   background-color: var(--azul);
+
   box-sizing: border-box;
+
 }
 .circulo:hover .burger-circulo {
   cursor: pointer;
@@ -94,9 +96,12 @@
   }
 }
 
+
+
 .content-links {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
 
   margin: auto;
 
@@ -110,6 +115,10 @@
   overflow: hidden;
 
   position: relative;
+  
+  box-shadow: 9px 9px 35px -8px rgba(0,0,0,0.62);
+
+
 }
 .circulo:hover .content-links {
   animation: nav 1s ease;
@@ -126,7 +135,6 @@
     border-radius: 0;
   }
 }
-
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +149,6 @@
   width: 100%;
   height: 50%;
 }
-
 .ul-link {
   margin: 0;
   width: 100%;
@@ -149,7 +156,6 @@
   padding: 0;
 
 }
-
 .li-link {
   list-style: none;
   width: 100%;
@@ -161,7 +167,6 @@
   border-top: 3px solid var(--blanco);
   overflow: hidden;
 }
-
 .link {
   position: absolute;
   z-index: 100;
@@ -170,7 +175,7 @@
   display: inline-block;
 
   width: 100%;
-  height: 100%;
+  height: 80px;
 
   padding-top: 18px;
 
@@ -185,7 +190,6 @@
   font-weight: bold;
   overflow: hidden;
 }
-
 .li-link::after {
   position: absolute;
   right: -100%;
@@ -199,13 +203,9 @@
 
   content: '';
 }
-
-
-
 .link:hover{
   color: var(--blanco);
 }
-
 .li-link:hover::after{
 
   animation: menu 2s alternate ease;
@@ -213,7 +213,6 @@
 
 
 }
-
 @keyframes menu {
 
   0%{
