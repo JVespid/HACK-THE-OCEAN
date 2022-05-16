@@ -16,7 +16,10 @@ ___
 
 ___
 
-<a name="problemática"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="problemática"></a>
 ## Planteamiento de la problemática 
 
 <p> 
@@ -27,7 +30,10 @@ no se enteran de dichos eventos y esto provoca que el interés por hacer un camb
 al ser seres sociales, todo aquello donde participa poca gente es menos atractivo que otro donde allá menos 
 </p>
 
-<a name="Propuesta"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="Propuesta"></a>
 ## Propuesta de solución 
 <p>
 Visto la problemática, ha llegado la hora de plantear una solución, al inicio pensamos ¿que podríamos hacer para que 
@@ -39,13 +45,19 @@ causas, para ser mas concretos una <b> Landing Page </b> que obtendrán la infor
 
 ___
 
-<a name="Solución"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="Solución"></a>
 ## Solución:
 
 si bien nuestra solución no es la mejor diseñada, cumple con el propósito de obtener información del usuario para luego almacenarla en una bases de datos, para luego poder utilizarla donde se necesite para poder solucionar el problema. <br>
 
 
-<a name="FrontEnd"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="FrontEnd"></a>
 > ### FrontEnd 
 > En esta parte fue utilizado la librería de react js, con las instalaciones de react-router-dom para las rutas y 
 > Axios para la parte de enviar y recibir datos desde un servidor de express js
@@ -62,20 +74,29 @@ si bien nuestra solución no es la mejor diseñada, cumple con el propósito de 
 > A qui esta el [Link](https://github.com/JVespid/hakaton/tree/master/client) para poder ir a ver el diseño de la pagina en el readme <br>
 > .
 
-<a name="BackEnd"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="BackEnd"></a>
 > ### BackEnd
 > En esta parte se utilizo Express JS para crear el servidor y también se utilizaron las dependencias de Mysql y de cors <br>
 > En esta parte solo se configuro el despliegue del servidor con el build de react para poder abrir el servidor en el <br>
 puerto 3000
 > 
-<a name="Servidor"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="Servidor"></a>
 > ### Servidor 
 > \(si esta leyendo esto, la pagina web no esta disponible para verla ahora mismo, pues estamos teniendo problemas para que la pagina se mantenga abierta, pues se cierra a momentos, no hya mensaje de error ni nada pero si quiere puede [ejecutar el servidor en LocalHost](#LocalHost) para poder probarlo) <br>
 > 
 >Se utilizo el servidor de Azure para poder desplegar la pagina, utilizamos una maquina virtual donde se ejecutan 
 >los archivos  de la carpeta [servidor](https://github.com/JVespid/hakaton/tree/master/server) 
 > 
-<a name="BD"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="BD"></a>
 > ### Base de datos
 > 
 > 
@@ -94,7 +115,10 @@ CREATE TABLE `hackosean`.`datospago` ( `id` INT NOT NULL AUTO_INCREMENT , `Nombr
 CREATE TABLE `test`.`datoscandidatos` ( `id` INT NOT NULL AUTO_INCREMENT , `Nombre` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL , `Edad` INT(50) NOT NULL , `Correo` VARCHAR(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL , PRIMARY KEY (`id`)) ;
 ~~~
 
-<a name="LocalHost"></a>
+
+<br>----[Inicio^](#inicio)
+
+ <a name="LocalHost"></a>
 > ### Como desplegar la pagina en LocalHost 
 > 
 > 1. Primero Debemos de importar la base de datos y para ello hay 2 formas, 1 crearla desde 0 con alguna interfaz gráfica o usar el código proporcionado arriba <br>
