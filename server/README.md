@@ -16,3 +16,6 @@ ___
 3. Luego de eso hay que abrir el navegador y poner el url `http:\\localhost:3000` <br>
 >
 4. Después de eso la pagina ya estaría en linea de forma <b>[LocalHost](https://github.com/JVespid/hakaton/#LocalHost)</b>
+
+
+ * Pero si se hace alguna modification en cualquier archivo del [FrontEnd](https://github.com/JVespid/hakaton/tree/master/client) y se quiere pasar a producción, hay que hacer el comando `npm run build` entando en el directorio de la carpeta [client](https://github.com/JVespid/hakaton/tree/master/client) y luego copiar la carpeta <b> build </b> a esta misma carpeta, remplazando la ya existente 

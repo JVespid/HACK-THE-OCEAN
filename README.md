@@ -1,4 +1,7 @@
 
+ <a name="inicio">
+
+
 # Proyecto de HACK THE OCEAN
 
 [Link](http://20.25.69.138:3000) al proyecto ya desplegado \("puede que no funcione por problemas con el servidor")
@@ -20,6 +23,7 @@ ___
 <br>----[Inicio^](#inicio)
 
  <a name="problemática"></a>
+
 ## Planteamiento de la problemática 
 
 <p> 
@@ -34,6 +38,7 @@ al ser seres sociales, todo aquello donde participa poca gente es menos atractiv
 <br>----[Inicio^](#inicio)
 
  <a name="Propuesta"></a>
+
 ## Propuesta de solución 
 <p>
 Visto la problemática, ha llegado la hora de plantear una solución, al inicio pensamos ¿que podríamos hacer para que 
@@ -49,6 +54,7 @@ ___
 <br>----[Inicio^](#inicio)
 
  <a name="Solución"></a>
+
 ## Solución:
 
 si bien nuestra solución no es la mejor diseñada, cumple con el propósito de obtener información del usuario para luego almacenarla en una bases de datos, para luego poder utilizarla donde se necesite para poder solucionar el problema. <br>
@@ -58,6 +64,7 @@ si bien nuestra solución no es la mejor diseñada, cumple con el propósito de 
 <br>----[Inicio^](#inicio)
 
  <a name="FrontEnd"></a>
+
 > ### FrontEnd 
 > En esta parte fue utilizado la librería de react js, con las instalaciones de react-router-dom para las rutas y 
 > Axios para la parte de enviar y recibir datos desde un servidor de express js
@@ -78,6 +85,7 @@ si bien nuestra solución no es la mejor diseñada, cumple con el propósito de 
 <br>----[Inicio^](#inicio)
 
  <a name="BackEnd"></a>
+
 > ### BackEnd
 > En esta parte se utilizo Express JS para crear el servidor y también se utilizaron las dependencias de Mysql y de cors <br>
 > En esta parte solo se configuro el despliegue del servidor con el build de react para poder abrir el servidor en el <br>
@@ -87,6 +95,7 @@ puerto 3000
 <br>----[Inicio^](#inicio)
 
  <a name="Servidor"></a>
+
 > ### Servidor 
 > \(si esta leyendo esto, la pagina web no esta disponible para verla ahora mismo, pues estamos teniendo problemas para que la pagina se mantenga abierta, pues se cierra a momentos, no hya mensaje de error ni nada pero si quiere puede [ejecutar el servidor en LocalHost](#LocalHost) para poder probarlo) <br>
 > 
@@ -97,6 +106,7 @@ puerto 3000
 <br>----[Inicio^](#inicio)
 
  <a name="BD"></a>
+
 > ### Base de datos
 > 
 > 
@@ -119,6 +129,7 @@ CREATE TABLE `test`.`datoscandidatos` ( `id` INT NOT NULL AUTO_INCREMENT , `Nomb
 <br>----[Inicio^](#inicio)
 
  <a name="LocalHost"></a>
+
 > ### Como desplegar la pagina en LocalHost 
 > 
 > 1. Primero Debemos de importar la base de datos y para ello hay 2 formas, 1 crearla desde 0 con alguna interfaz gráfica o usar el código proporcionado arriba <br>

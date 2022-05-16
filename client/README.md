@@ -36,7 +36,11 @@ ___
  <a name="p7">
 
  ### Información de las Animaciones
- las animaciones que se usaron son practicas ya que tienen sus funciones
+ las animaciones que se usaron son practicas ya que tienen sus funciones 
+ * La animación del botón de menu hace que se despliege y se pueda usar
+ * La función de los imput funciona para que el usuario se sienta mas cómodo al momento de escribir o de presionar algun boton <br>
+ puede que sean pocas animaciones pero tienen sus funcionalidades 
+
 <br>----[Inicio^](#inicio)
 
 
@@ -66,5 +70,9 @@ ___
  <a name="p6">
 
  ### Como Compilar la React app
+ para poder desplegar la pagina en `localhost` <br>
+ * Primero hay que ejecutar el comando de `npm i` para instalar las dependencias
+ * Luego de eso hay que iniciar el servidor con el comando `npm start`, 
+ * Pero si se hace alguna modification en cualquier cosa y se quiere pasar a producción, hay que hacer el comando `npm run build` y luego copiar la carpeta <b> build </b> a la carpeta de [server](https://github.com/JVespid/hakaton/tree/master/server), remplazando la carpeta build ya existente
 <br>----[Inicio^](#inicio)
 
