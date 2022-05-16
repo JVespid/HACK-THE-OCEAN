@@ -31,13 +31,17 @@ ___
  <a name="p3">
  ### Pagina de home
 
-![Imagen de la vista de Home](./img/home.png)
+![Imagen de la vista de Home](https://github.com/JVespid/hakaton/blob/master/img/home.png)
 
  <a name="p4">
  ### Pagina de mas Información 
+
+![Imagen de la vista de Home](https://github.com/JVespid/hakaton/blob/master/img/info.png)
  
  <a name="p5">
  ### Pagina de ayuda
+
+![Imagen de la vista de Home](https://github.com/JVespid/hakaton/blob/master/img/ayuda.png)
 
  <a name="p6">
  ### Como Compilar la React app
