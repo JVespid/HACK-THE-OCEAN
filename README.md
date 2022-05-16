@@ -83,10 +83,25 @@ que la pagina se mantenga abierta, pues se cierra a momentos, no hya mensaje de 
 > ### Base de datos
 > 
 > 
+> La base de datos llamada <b> hackosean </b> usa de 2 tablas <br>
+> Una tabla llamada <b>datospago</b> con las columnas de <b>Nombre</b>, <b>NombreDonador</b>, <b> Pago</b>, <b>MSG </b><br>
+> Otra tabla llamada <b>datoscandidatos</b> con las comunas de <b>Nombre</b>, <b>Edad</b>, <b>Correo</b>
 >
+> O también puede copiar los siguientes códigos para crear la base de datos desde cero
+~~~
+CREATE DATABASE hackosean
+
+USE hackosean
+
+CREATE TABLE `hackosean`.`datospago` ( `id` INT NOT NULL AUTO_INCREMENT , `Nombre` VARCHAR(50) NOT NULL , `NombreDonador` VARCHAR(50) NOT NULL , `Pago` INT(70) NOT NULL , `MSG` VARCHAR(100) NOT NULL , PRIMARY KEY (`id`));
+
+CREATE TABLE `test`.`datoscandidatos` ( `id` INT NOT NULL AUTO_INCREMENT , `Nombre` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL , `Edad` INT(50) NOT NULL , `Correo` VARCHAR(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL , PRIMARY KEY (`id`)) ;
+~~~
 
 <a name="LocalHost"></a>
 > ### Como desplegar la pagina en LocalHost 
 > 
 > 
+> Para poder usar la base de datos en Local Host es necesario que el <b> usuario sea root y no tenga contraseña </b>
+> y que tenga la base de datos exacta de [hackosean](#BD)
 >
