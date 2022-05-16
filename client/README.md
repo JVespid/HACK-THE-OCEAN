@@ -17,42 +17,54 @@ ___
 
 ___
 
- ## FrontEnd  ----[Inicio^](inicio)
+ ## FrontEnd 
 
  <a name="p1">
 
- #### Diseño de la pagina: ----[Inicio^](inicio)
+ #### Diseño de la pagina:
  El diseño de la pagina web primero inicio con una [maquetación en figma](https://www.figma.com/file/QCMdeMuRiVy8juv74V11ov/Untitled?node-id=80%3A73)
+
+<br>----[Inicio^](inicio)
 
  <a name="p2">
 
- ### Diseño de la pagina: ----[Inicio^](inicio)
+ ### Diseño de la pagina:
  Esta pagina web esta echa en react asi que cada parte de ella es un componente, por lo que esta dividida en diferentes carpetas y en cada carpeta con algún componente tiene su archivo `.js` y su respectivo archivo `.css`
+<br>----[Inicio^](inicio)
+
  
  <a name="p7">
 
- ### Información de las Animaciones ----[Inicio^](inicio)
-
+ ### Información de las Animaciones
  las animaciones que se usaron son practicas ya que tienen sus funciones
+<br>----[Inicio^](inicio)
+
 
  <a name="p3">
 
- ### Pagina de home ----[Inicio^](inicio)
+ ### Pagina de home 
 
 ![Imagen de la vista de Home](https://github.com/JVespid/hakaton/blob/master/img/home.png)
+<br>----[Inicio^](inicio)
 
  <a name="p4">
 
- ### Pagina de mas Información  ----[Inicio^](inicio)
+ ### Pagina de mas Información 
 
 ![Imagen de la vista de Home](https://github.com/JVespid/hakaton/blob/master/img/info.png)
+<br>----[Inicio^](inicio)
+
  
  <a name="p5">
 
- ### Pagina de ayuda ----[Inicio^](inicio)
+ ### Pagina de ayuda
 
 ![Imagen de la vista de Home](https://github.com/JVespid/hakaton/blob/master/img/ayuda.png)
+<br>----[Inicio^](inicio)
+
 
  <a name="p6">
 
- ### Como Compilar la React app ----[Inicio^](inicio)
+ ### Como Compilar la React app
+<br>----[Inicio^](inicio)
+
