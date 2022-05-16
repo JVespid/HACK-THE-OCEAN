@@ -170,10 +170,20 @@ function TablaDonaciones(props) {
 function DatosUsuario(props) {
 
   const [nombre, setNombre] = useState("");
-  const [edad, setEdad] = useState(0)
-  const [correo, setCorreo] = useState("")
+  const [edad, setEdad] = useState(0);
+  const [correo, setCorreo] = useState("");
+
+  const VaciarInputs = ()=>{
+    
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach(input =>{
+      input.value = '';
+    })
+  }
+
 
   const setDatos = () => {
+    VaciarInputs();
 
     console.log(nombre + " " + edad + " " + correo + " ")
 
@@ -239,7 +249,19 @@ function DatosTarjetas(props) {
   const [pago, setPago] = useState(0)
   const [msg, setMsg] = useState("")
 
+  const VaciarInputs = ()=>{
+    
+    let inputs = document.querySelectorAll("input");
+
+    inputs.forEach(input =>{
+      input.value = '';
+    })
+  }
+
+
+
   const setDonacion = () => {
+    VaciarInputs();
 
     console.log(props.host)
     Axios.post(`${props.host}setDatosPago`, {

@@ -29,6 +29,8 @@
   color: var(--blanco);
 }
 
+
+
 .info-cuerpo-top,
 .info-cuerpo-bottom{
   
@@ -79,9 +81,10 @@
   display: flex;
   flex-wrap: wrap;
 
+  margin: 10px auto;
+
   width: 100%;
   overflow: hidden;
-  margin: 50px 50px;
 
 }
 
@@ -92,22 +95,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  margin: auto;
-
-  border-right: 3px solid var(--rosa);
-  border-bottom: 3px solid var(--rosa);
-  box-shadow: 9px 9px 35px -8px rgba(0, 0, 0, 0.62);
-
-}
-
-.info-cuerpo-p p,
-.info-Cuerpo-bottom-p{
   
-  position: relative;
-
-  display: flex;
-  flex-wrap: wrap;
 
   width:80%;
   text-align: justify;
@@ -116,6 +104,10 @@
   padding: 20px;
 
   font-size: 25px;
+
+  border-right: 3px solid var(--rosa);
+  border-bottom: 3px solid var(--rosa);
+  box-shadow: 9px 9px 35px -8px rgba(0, 0, 0, 0.62);
 
 }
 
