@@ -13,6 +13,7 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
+app.set('port', process.env.PORT || 3000);
 
 
 app.use(express.static(path.join(__dirname, 'build')));
@@ -110,6 +111,6 @@ app.post('/getDonaciones',(req, res) => {
 
 
 
-app.listen(process.env.PORT || 3000, ()=>{
+app.listen(app.get('port'), ()=>{
     console.log('servidor En linea');
 }) 

@@ -4,8 +4,7 @@
 
 # Proyecto de HACK THE OCEAN
 
-[Link](http://20.25.69.138:3000) al proyecto ya desplegado \("puede que no funcione por problemas con el servidor")
-
+[Link](https://hack-the-ocean.azurewebsites.net/) al proyecto ya desplegado \("puede que no funcione la conexion a la Base de datos por problemas con la conexion a la misma")
 ___
 ## Índice de contenidos
 * [Planteamiento de la problemática](#problemática)
@@ -97,7 +96,9 @@ puerto 3000
  <a name="Servidor"></a>
 
 > ### Servidor 
-> \(si esta leyendo esto, la pagina web no esta disponible para verla ahora mismo, pues estamos teniendo problemas para que la pagina se mantenga abierta, pues se cierra a momentos, no hya mensaje de error ni nada pero si quiere puede [ejecutar el servidor en LocalHost](#LocalHost) para poder probarlo) <br>
+>[Link](https://hack-the-ocean.azurewebsites.net/) al proyecto ya desplegado \("puede que no funcione la conexion a la Base de datos por problemas con la conexion a la misma") 
+>
+> \(si esta leyendo esto, la pagina web no cuanta con una conexcion estable a la base de datos, pero si quiere puede [ejecutar el servidor en LocalHost](#LocalHost) para poder probarlo) <br>
 > 
 >Se utilizo el servidor de Azure para poder desplegar la pagina, utilizamos una maquina virtual donde se ejecutan 
 >los archivos  de la carpeta [servidor](https://github.com/JVespid/hakaton/tree/master/server) 

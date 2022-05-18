@@ -9,7 +9,8 @@ const imgName = require.context('./../../assets/img/ayuda', true)
 
 export default function Ayuda(props) {
 
-  const host = 'http://localhost:3000/';
+
+  const host = '/';
 
   return (
     <>
