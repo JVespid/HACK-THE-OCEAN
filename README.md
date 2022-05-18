@@ -4,7 +4,7 @@
 
 # Proyecto de HACK THE OCEAN
 
-[Link](https://hack-the-ocean.azurewebsites.net/) al proyecto ya desplegado \("puede que no funcione la conexion a la Base de datos por problemas con la conexion a la misma")
+[Link](https://hack-ocean.azurewebsites.net) al proyecto ya desplegado \("puede que no funcione la conexion a la Base de datos por problemas con la conexion a la misma")
 ___
 ## Índice de contenidos
 * [Planteamiento de la problemática](#problemática)

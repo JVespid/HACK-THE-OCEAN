@@ -93,20 +93,27 @@ function TablaDonaciones(props) {
 
 
   const ObtencionLista = () => {
-    Axios.post(`${props.host}getIDonaciones`, {
 
-    }).then(response => {
-      Axios.post(`${props.host}getDonaciones`, {
-        envio: response.data[0].id
+    try {
+      Axios.post(`${props.host}getIDonaciones`, {
 
       }).then(response => {
-        if (i === 0) {
-          setDatos(response.data)
-          setI(1)
-        }
+        Axios.post(`${props.host}getDonaciones`, {
+          envio: response.data[0].id
+
+        }).then(response => {
+          if (i === 0) {
+            setDatos(response.data)
+            setI(1)
+          }
+        })
+
       })
 
-    })
+    } catch (err) {
+      console.log(err)
+    }
+
   }
 
   const iterador = () => {
@@ -174,10 +181,10 @@ function DatosUsuario(props) {
   const [edad, setEdad] = useState(0);
   const [correo, setCorreo] = useState("");
 
-  const VaciarInputs = ()=>{
-    
+  const VaciarInputs = () => {
+
     let inputs = document.querySelectorAll("input");
-    inputs.forEach(input =>{
+    inputs.forEach(input => {
       input.value = '';
     })
   }
@@ -185,19 +192,22 @@ function DatosUsuario(props) {
 
   const setDatos = () => {
     VaciarInputs();
+    try {
+      Axios.post(`${props.host}setDatosUsuario`, {
+  
+        nombre: nombre,
+        edad: edad,
+        correo: correo
+  
+      }).then(() => {
+  
+        console.log("Datos recibidos con éxito");
+      })
+      
+    } catch (err) {
+      console.log(err)
+    }
 
-    console.log(nombre + " " + edad + " " + correo + " ")
-
-    Axios.post(`${props.host}setDatosUsuario`, {
-
-      nombre: nombre,
-      edad: edad,
-      correo: correo
-
-    }).then(() => {
-
-      console.log("Datos recibidos con éxito");
-    })
   }
 
   return (
@@ -250,11 +260,11 @@ function DatosTarjetas(props) {
   const [pago, setPago] = useState(0)
   const [msg, setMsg] = useState("")
 
-  const VaciarInputs = ()=>{
-    
+  const VaciarInputs = () => {
+
     let inputs = document.querySelectorAll("input");
 
-    inputs.forEach(input =>{
+    inputs.forEach(input => {
       input.value = '';
     })
   }
@@ -263,21 +273,23 @@ function DatosTarjetas(props) {
 
   const setDonacion = () => {
     VaciarInputs();
-
-    console.log(props.host)
-    Axios.post(`${props.host}setDatosPago`, {
-
-      nombre: nombre,
-      nombreDonador, nombreDonador,
-      NumeroTarjeta: NumeroTarjeta,
-      fecha: fecha,
-      CVV: CVV,
-      pago: pago,
-      msg: msg
-
-    }).then(() => {
-      console.log("Datos recibidos con éxito");
-    })
+    try {
+      Axios.post(`${props.host}setDatosPago`, {
+        nombre: nombre,
+        nombreDonador, nombreDonador,
+        NumeroTarjeta: NumeroTarjeta,
+        fecha: fecha,
+        CVV: CVV,
+        pago: pago,
+        msg: msg
+  
+      }).then(() => {
+        console.log("Datos recibidos con éxito");
+      })
+      
+    } catch (err) {
+      console.log(err)
+    }
 
   }
 
